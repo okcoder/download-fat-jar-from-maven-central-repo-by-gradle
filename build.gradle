@@ -1,0 +1,17 @@
+repositories {
+   mavenCentral()
+}
+
+configurations { 
+    fatJar
+    fatJar.transitive = false
+}
+
+dependencies {
+   fatJar 'org.springframework.cloud.stream.app:http-source-kafka:4.0.0'
+}
+
+task copyDependencies(type: Copy) {
+  from configurations.fatJar
+  into 'app'
+}
