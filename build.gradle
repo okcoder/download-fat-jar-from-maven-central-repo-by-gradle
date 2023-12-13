@@ -9,6 +9,7 @@ configurations {
 
 dependencies {
    fatJar 'org.springframework.cloud.stream.app:http-source-kafka:4.0.0'
+   fatJar 'org.springframework.cloud.stream.app:log-sink-kafka:4.0.0'
 }
 
 task copyDependencies(type: Copy) {
